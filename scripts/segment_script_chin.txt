@@ -1,0 +1,8 @@
+ ["set_signal_name",('signal0',),{}]
+["toggle_signal",(True,),{}]
+["toggle_signal",(False,),{}]
+["apply_signal_filter",('mean', 2.0, 1),{}]
+["local_contrast",(30.0,),{}]
+["init_spm",(None, %s),{}]
+["set_spm_params",({'N': 5000, 'temperaturescale': 1950.0, 'gradientinteraction': 10.0, 'persistencestrength':16.0},),{}]
+["evolve_spm2",(),{}]

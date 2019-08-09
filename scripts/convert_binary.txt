@@ -1,0 +1,5 @@
+["add_ply",('%s',),{}]
+["make_borders",(),{}]
+["erode_labels",(),{}]
+["bake_transform",(),{}]
+["save_ply",('%s',),{}]

@@ -1,0 +1,3 @@
+["add_ply",('%s',),{'orientation':None}]
+["rotate_axis",(array([0., 0., 1.]), 1.5707963267948966, False),{}]
+["save_ply",('%s',),{}]

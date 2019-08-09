@@ -1,0 +1,21 @@
+BootStrap: docker
+From: ubuntu:16.04
+
+%post
+    apt-get -y update
+    apt-get -y install git python gcc python-tk 
+    git clone https://bitbucket.org/jfozard_JIC/python-spm.git
+    apt-get -y install python-pip libeigen3-dev
+   
+    pip install -U numpy matplotlib==2.2.4
+    pip install -U networkx==2.2
+    pip install -U SimpleITK scipy  cython tifffile==2018.11.28
+    pip install  networkx==2.2 scikit-image==0.14.2
+    cd /python-spm/src
+    python setup.py build_ext --inplace
+
+
+%runscript
+    python "$@"
+
+	    

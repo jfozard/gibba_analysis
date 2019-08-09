@@ -1,0 +1,8 @@
+["split_disconnected_cells",(),{}]
+["remove_small_large_cells",(0.05, 1000.0),{}]
+["changeThreshold",(256, 'Mesh 1'),{}]
+["watershed",(),{}]
+["get_data",(),{}]
+["calculate_edge_cells",(),{}]
+["select_by_cellprop",('norm_area>5 or edge',),{}]
+["delete_selected",(),{}]

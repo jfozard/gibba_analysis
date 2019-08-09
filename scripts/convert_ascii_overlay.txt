@@ -1,0 +1,5 @@
+["add_ply",('%s',),{}]
+["make_cell_vectors",(),{}]
+["select_obj_name",('Mesh 1 centres',),{}]
+["bake_transform",(),{}]
+["save_ply",('%s',),{'as_ascii': True}]

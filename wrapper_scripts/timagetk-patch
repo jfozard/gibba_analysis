@@ -1,0 +1,29 @@
+diff --git a/timagetk/components/tiff_image.py b/timagetk/components/tiff_image.py
+index 9157f76..b3f137c 100644
+--- a/timagetk/components/tiff_image.py
++++ b/timagetk/components/tiff_image.py
+@@ -152,14 +152,14 @@ def write_tiff_image(tiff_file, sp_img):
+             if sp_img.get_dim()==2:
+                 data = np.transpose(sp_img.get_array())
+             elif sp_img.get_dim()==3:
+-                data = np.transpose(sp_img.get_array(), (2, 1, 0))
+-
++                data = np.transpose(sp_img.get_array(), (2, 1, 0)
++            print(data.shape)
+             with TiffWriter(tiff_file, bigtiff=False, imagej=True) as tif:
+                 voxelsize = sp_img.get_voxelsize()
+                 if sp_img.get_dim()==2:
+                     tif.save(data, compress=0, resolution=(1.0/voxelsize[0],1.0/voxelsize[1]))
+                 elif sp_img.get_dim()==3:
+-                    metadata_dict={'spacing': voxelsize[2], 'slices':sp_img.get_shape()[2]}
++                    metadata_dict={'spacing': voxelsize[2] }
+                     tif.save(data, compress=0, resolution=(1.0/voxelsize[0],1.0/voxelsize[1]), metadata=metadata_dict)
+             tif.close()
+         else:
+@@ -167,4 +167,4 @@ def write_tiff_image(tiff_file, sp_img):
+             return
+     else:
+         print('sp_img is not a SpatialImage')
+-        return
+\ No newline at end of file
++        return

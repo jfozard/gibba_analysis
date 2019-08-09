@@ -1,0 +1,33 @@
+BootStrap: docker
+From: ubuntu:16.04
+
+%post
+# Download base image ubuntu 16.04
+
+# Update Ubuntu Software repository
+apt-get update
+apt-get -y upgrade
+
+apt-get -y install git cmake  gcc g++ wget bzip2 scons zlib1g-dev
+#git clone https://gitlab.inria.fr/mosaic/timagetk
+#cd timagetk && git reset --hard 7c34720e
+#git checkout 9409f758 timagetk/__init__.py
+git clone https://github.com/VirtualPlants/timagetk.git
+cd timagetk
+scons .
+apt-get -y install python-setuptools
+python setup.py install
+
+
+
+apt-get -y install python-pil
+apt-get -y install python-pip
+pip install numpy==1.15.4 scipy networkx==2.2
+pip install scikit-image==0.14.2 matplotlib==2.1.2
+pip install SimpleITK tifffile==2018.11.28 
+
+
+
+%runscript
+    export LD_LIBRARY_PATH=/timagetk/timagetk/build-scons/lib/:$LD_LIBRARY_PATH
+    "$@"

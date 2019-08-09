@@ -1,0 +1,16 @@
+BootStrap: docker
+From: ubuntu:16.04
+
+%post
+    apt-get -y update
+    apt-get -y install git g++ cmake libinsighttoolkit4-dev libboost-dev
+    git clone https://bitbucket.org/jfozard_JIC/combine_seg.git 
+    apt-get -y install libeigen3-dev
+    cd combine_seg/src
+    cmake .
+    make    
+   
+%runscript
+    /combine_seg/src/seg_combine3d "$@"
+
+	    

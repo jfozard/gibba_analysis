@@ -1,0 +1,6 @@
+["select_by_cellprop",('(norm_area<0.25) or (norm_area>4)',),{}]
+["set_non_cell",(),{}]
+["choose_celltype",(),{}]
+["set_prop_scale",(0.0, 2.0),{}]
+["make_borders",(),{}]
+["set_alpha",(1.0,),{}]

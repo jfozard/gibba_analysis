@@ -1,0 +1,6 @@
+filename,mask_dir,class,trap_length,DAI,HAI,surface_erode,Combine_level,Segment_mean,Segment_grad,Segment_nbhoodsize,timagetk_threshold,timagetk_blur,best_seg,spm_path,seg3d_level
+wt80um,A/WT80_JF3/WT80_crop,A,50.56284,3.7888320766,90.9319698393,0,0.3,0.5,10,-2,550,1,0,,6
+wt 126-2,B/wt 126-2_JF3/126-2 cropped,B,101.86614,5.4117266716,129.881440119,1,0.3,0.5,10,-2,250,1,0,,8
+wt123um,C/WT123_JF3/WT123_png_AD_MedianFilter_cropUSE,C,121.647,5.822902441,139.7496585762,2,0.3,0.5,10,-2,100,1,0,,8
+PI_bladder_2_29-1-16,5/PI_bladder_2_29-1-16/PI_bladder_2_29-1-16Crop,C,147.0342,6.262062388,150.2894973234,2,0.3,0.5,10,-2,200,1,2,SPM3D_HN0II350TC0EO-12TS350PS25BS99GB2SD1RT10000/CellstateFinal/%05d.png,8
+medium bladder for mgx-1 220316,D/medium bladder for mgx-1 220316_JF3/medium bladder for mgx-1CROP,D,213.6756,7.12812594741514,171.075022738,2,0.3,0.5,10,-2,350,2,1,,8

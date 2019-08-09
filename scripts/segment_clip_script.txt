@@ -1,0 +1,4 @@
+["set_signal_name",('signal0',),{}]
+["init_spm",(None, %s),{}]
+["set_spm_params",({'N': 5000},),{}]
+["evolve_spm2",(),{}]

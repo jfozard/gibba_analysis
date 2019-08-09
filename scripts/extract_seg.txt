@@ -1,0 +1,5 @@
+["load_label",(%s,),{}]
+["load_signal",(%s,),{}]
+["load_signal",(%s,),{}]
+["load_ply",(%s,),{}]
+["write_projection_surface",(%s, 0.0, 1.0),{}]

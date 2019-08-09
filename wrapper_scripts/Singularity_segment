@@ -1,0 +1,38 @@
+BootStrap: docker
+From: ubuntu:16.04
+
+%post
+    apt-get -y update
+    apt-get -y install git python gcc python-tk 
+    git clone https://bitbucket.org/jfozard_JIC/surface_SPM.git -b refactor --single-branch
+    apt-get -y install python-pip libeigen3-dev
+    apt-get -y install libosmesa6-dev python-qt4
+
+#    pip install -U pip
+
+    pip install -U numpy matplotlib==2.2.4
+    pip install -U networkx==2.2
+    pip install -U SimpleITK scipy  cython tifffile==2018.11.28
+    pip install  networkx==2.2 scikit-image==0.14.2
+
+    pip install -U pqdict
+    cd /surface_SPM/src
+    cd mesh
+    python setup.py build_ext --inplace
+    cd ../spm
+    python setup.py build_ext --inplace
+    cd ../viewer
+    python setup.py build_ext --inplace
+    cd ../cpm
+    python setup.py build_ext --inplace
+
+%apprun combine
+    python /surface_SPM/src/mesh/combine_weighted.py "$@"
+
+%apprun image
+    python /surface_SPM/src/multi_tool_nogui.py "$@"
+
+%runscript
+    python /surface_SPM/src/headless_tool.py "$@"
+
+	    
